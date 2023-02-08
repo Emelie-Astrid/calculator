@@ -1,0 +1,21 @@
+body {
+    background-color:lightgray;
+}
+
+.calculator {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin: 5px;
+}
+
+.row {
+    background-color: wheat;
+    display: flex;
+    justify-content: space-between;
+
+}
