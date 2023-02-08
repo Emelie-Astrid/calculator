@@ -26,8 +26,22 @@ clear.addEventListener ("click", (e) => {
     clearInput();
 })
 
-result.addEventListener ("click", () => {
+result.addEventListener ("click", (e) => {
     displayResult();
+    console.log("click " + e.target.id)
+})
+
+//display + value av input för alla siffror? 
+zero.addEventListener ("click", (e) => {
+    input.value = zero.value;
+    console.log("zero = " + zero.value);
+    console.log("input = " + input.value);
+})
+
+
+result.addEventListener ("click", (e) => {
+    displayResult();
+    console.log("click " + e.target.id)
 })
 
 function clearInput() {
@@ -37,6 +51,8 @@ function clearInput() {
 function displayResult() {
     input.value = "Resultatet";
 }
+
+
 
 
 
