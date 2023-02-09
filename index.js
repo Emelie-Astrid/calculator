@@ -21,6 +21,9 @@ const additionBtn = document.querySelector("#addition");
 const result = document.querySelector("#equal");
 const clear = document.querySelector("#clear");
 
+const numbers = document.getElementsByClassName("number");
+
+let inputArr = [];
 
 clear.addEventListener ("click", (e) => {
     clearInput();
@@ -34,18 +37,25 @@ result.addEventListener ("click", (e) => {
 //display + value av input för alla siffror? 
 zero.addEventListener ("click", (e) => {
     input.value = zero.value;
-    console.log("zero = " + zero.value);
-    console.log("input = " + input.value);
+    inputArr.push(zero.value);
+    console.log(inputArr);
+    // console.log("zero = " + zero.value);
+    // console.log("input = " + input.value);
 })
 
-
-result.addEventListener ("click", (e) => {
-    displayResult();
-    console.log("click " + e.target.id)
+one.addEventListener ("click", (e) => {
+    input.value = one.value;
+    inputArr.push(one.value);
+    console.log(inputArr);
+    // console.log("one = " + one.value);
+    // console.log("input = " + input.value);
 })
+
 
 function clearInput() {
     input.value = "";
+    inputArr = [];
+    console.log(inputArr);
 }
 
 function displayResult() {
